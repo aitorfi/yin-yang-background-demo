@@ -1,0 +1,140 @@
+$left-color: #282828;
+$right-color: #FFF;
+$large-side-border-radius: 200px;
+
+body {
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  .wrapper:nth-child(1) .right.large {
+    border-top-left-radius: 0px !important;
+  }
+
+  .wrapper:last-child .left.large {
+    border-bottom-right-radius: 0px !important;
+  }
+}
+
+.wrapper {
+  min-height: 700px;
+}
+
+.right-large-bg, .left-large-bg {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-large-bg {
+  background-color: $left-color;
+}
+
+.left-large-bg {
+  background-color: $right-color;
+}
+
+.left {
+  background-color: $left-color;
+
+  &.large {
+    border-top-right-radius: $large-side-border-radius;
+    border-bottom-right-radius: $large-side-border-radius;
+  }
+
+  .timeline {
+    color: $right-color;
+  }
+}
+
+.right {
+  background-color: $right-color;
+
+  &.large {
+    border-top-left-radius: $large-side-border-radius;
+    border-bottom-left-radius: $large-side-border-radius;
+  }
+
+  .timeline {
+    color: $left-color;
+  }
+}
+
+.small {
+  width: 10%;
+}
+
+.large {
+  width: 90%;
+}
+
+/* TIMELINE STYLES */
+h3 {
+  border-bottom: 3px solid #FFD261;
+  margin: 5px 0px;
+  padding: 5px 0px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 50px auto;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Hide last node's pipe. */
+.timeline-item:last-child .timeline-pipe {
+  background-color: transparent;
+}
+
+.timeline-text {
+  width: 300px;
+  height: fit-content;
+}
+
+.timeline-text span {
+  color: #9C9C9C;
+  font-size: 0.9rem;
+}
+
+.timeline-text p {
+  margin: 10px 0px;
+}
+
+.timeline-image-right {
+  margin: 0px 325px 0px 25px;
+}
+
+.timeline-image-left {
+  margin: 0px 25px 0px 325px;
+}
+
+.timeline-node {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0% auto;
+  border-radius: 50%;
+  background-color: #FFD261;
+}
+
+.timeline-node img {
+  width: 30px;
+  height: auto;
+  margin: auto;
+}
+
+.timeline-pipe {
+  display: flex;
+  width: 15px;
+  height: 100%;
+  margin: -5px auto;
+  background-color: #FFD261;
+}
